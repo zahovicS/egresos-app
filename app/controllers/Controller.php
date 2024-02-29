@@ -9,4 +9,9 @@ namespace App\Controllers;
  */
 class Controller extends \Leaf\Controller
 {
+    protected $form;
+    function __construct()
+    {
+        $this->form = form();
+    }
 }

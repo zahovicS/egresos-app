@@ -1,28 +1,28 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div class="register-container w-75">
-        <section>
-            <h1>Login</h1>
-            <p>
-                Sign into {{ _env('APP_NAME', 'Leaf MVC') }}
-            </p>
-        </section>
-        <form action="/auth/login" method="post">
-            <div class="form-group mb-3">
-                <input class="form-control" type="text" name="username" placeholder="username"
-                    value="{{ $username ?? '' }}">
-                <small class="mb-1 text-danger">{{ $errors['username'] ?? ($errors['auth'] ?? null) }}</small>
-            </div>
-            <div class="form-group mb-3">
-                <input class="form-control" type="password" name="password" placeholder="password"
-                    value="{{ $password ?? '' }}">
-                <small class="mb-1 text-danger">{{ $errors['password'] ?? null }}</small>
-            </div>
-            <button class="btn btn-primary">Login</button>
-        </form>
-        <div class="mt-4">
-            <a href="{{ AuthConfig('GUARD_REGISTER') }}">Create an account</a>
+    <section class="login-content">
+        <div class="logo">
+            <h1>{{ _env("APP_NAME", "Sistema") }}</h1>
         </div>
-    </div>
+        <div class="login-box">
+            <form class="login-form" action="/auth/login" method="post" autocomplete="off">
+                <h3 class="login-head"><i class="bi bi-person me-2"></i>Inicia sesión</h3>
+                <div class="mb-3">
+                    <label class="form-label">Usuario</label>
+                    <input class="form-control" type="text" placeholder="usuario" name="username" value="{{ $username ?? '' }}" autocomplete="off" autofocus readonly>
+                    <small class="mb-1 text-danger">{{ $errors['username'] ?? ($errors['auth'] ?? null) }}</small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Contraseña</label>
+                    <input class="form-control" type="password" placeholder="contraseña" name="password" value="{{ $password ?? '' }}" autocomplete="off" readonly>
+                    <small class="mb-1 text-danger">{{ $errors['password'] ?? null }}</small>
+                </div>
+                <div class="mb-3 btn-container d-grid">
+                    <button class="btn btn-primary btn-block">
+                        <i class="ri-login-box-line"></i> Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </section>
 @endsection

@@ -1,8 +1,10 @@
 <?php
 
 app()->get('/', function () {
-    /**
-     * `render(view, [])` is the same as `echo view(view, [])`
-     */
-    render('index');
+    return redirect('/dashboard');
 });
+
+app()->get('/dashboard', ['middleware' => 'web-auth', function () {
+    // user is logged in
+    return render("pages.dashboard.index");
+  }]);

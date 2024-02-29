@@ -105,7 +105,7 @@ return [
     | Error to show when the login params aren't found in db
     |
     */
-    'LOGIN_PARAMS_ERROR' => 'Username not registered!',
+    'LOGIN_PARAMS_ERROR' => 'Usuario no registrado!',
 
     /*
     |--------------------------------------------------------------------------
@@ -115,7 +115,7 @@ return [
     | Error to show when the login password is wrong
     |
     */
-    'LOGIN_PASSWORD_ERROR' => 'Password is incorrect!',
+    'LOGIN_PASSWORD_ERROR' => 'Contraseña incorrecta!',
 
     /*
     |--------------------------------------------------------------------------
@@ -154,7 +154,7 @@ return [
     | Home page route
     |--------------------------------------------------------------------------
     */
-    'GUARD_HOME' => '/home',
+    'GUARD_HOME' => '/dashboard',
 
     /*
     |--------------------------------------------------------------------------

@@ -19,8 +19,8 @@ class LoginController extends Controller
 
         $data = request()->get(['username', 'password']);
 
-        $this->form->validate([
-            'username' => 'validUsername',
+        $this->form->validate($data,[
+            'username' => 'required|username',
         ]);
 
         $user = auth()->login($data);

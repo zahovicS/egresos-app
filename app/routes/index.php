@@ -54,5 +54,8 @@ app()->setNamespace('\App\Controllers');
 | it here like so:
 |
 */
+app()->registerMiddleware('web-auth', function () {
+    auth()->guard('auth');
+});
 // require __DIR__ . '/custom-route.php';
 require __DIR__ . '/_auth.php';

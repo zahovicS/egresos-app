@@ -1,8 +1,8 @@
 <?php
 return [
-    ["header" => "administracion"],
+    // ["header" => "administracion"],
     [
-        "url" => "/",
+        "url" => "/dashboard",
         "text" => "Inicio",
         "icon" => "ri-speed-up-line"
     ],

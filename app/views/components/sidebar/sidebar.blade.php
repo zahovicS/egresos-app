@@ -18,18 +18,10 @@
 <aside class="app-sidebar">
     @if (auth()->status())
         <div class="app-sidebar__user">
-            <img class="app-sidebar__user-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Image">
+            <img class="app-sidebar__user-avatar" src="{{ assets(auth()->user()["profile"]) }}" alt="User Image">
             <div>
-                <p class="app-sidebar__user-name">John Doe</p>
-                <p class="app-sidebar__user-designation">Frontend Developer</p>
-            </div>
-        </div>
-    @else
-        <div class="app-sidebar__user">
-            <img class="app-sidebar__user-avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Image">
-            <div>
-                <p class="app-sidebar__user-name">John Doe</p>
-                <p class="app-sidebar__user-designation">Frontend Developer</p>
+                <p class="app-sidebar__user-name">{{ auth()->user()["fullname"] }}</p>
+                <p class="app-sidebar__user-designation">&#64;{{ auth()->user()["username"] }}</p>
             </div>
         </div>
     @endif

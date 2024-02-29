@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+    @include('components.dashboard.widgets-totales')
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>

@@ -14,6 +14,9 @@ class DatabaseSeeder extends Seeder
     {
         return [
             UsersSeeder::class,
+            TipoDinerosSeeder::class,
+            CuentaSeeder::class,
+            CategoriaSeeder::class,
         ];
     }
 }
