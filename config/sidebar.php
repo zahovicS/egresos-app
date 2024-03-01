@@ -7,16 +7,26 @@ return [
         "icon" => "ri-speed-up-line"
     ],
     [
+        "url" => "/categorias",
         "text" => "Categorias",
-        "icon" => "ri-archive-drawer-line",
+        "icon" => "ri-price-tag-3-fill"
+    ],
+    [
+        "url" => "/cuentas",
+        "text" => "Cuentas",
+        "icon" => "ri-wallet-2-line"
+    ],
+    [
+        "text" => "Transacciones",
+        "icon" => "ri-arrow-left-right-line",
         "submenu" => [
             [
                 "url" => "/asdsada",
-                "text" => "Registrar proyecto",
+                "text" => "Nueva transacción",
             ],
             [
                 "url" => "/proyectos/ver-proyectos",
-                "text" => "Ver proyectos",
+                "text" => "Transacciones",
             ],
         ],
     ],
