@@ -1,8 +1,9 @@
 <?php
 
-function base_url(string $path = ""):string
+function base_url(string $path = ""): string
 {
-    return _env("BASE_URL") ?? "/";
+    $url = _env("BASE_URL") ?? "/";
+    return "{$url}{$path}";
 }
 
 function assets_path(string $asset = ""): string

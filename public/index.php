@@ -107,4 +107,7 @@ Leaf\Core::loadApplicationConfig();
 | This line brings in all your routes and starts your application
 |
 */
+
+initESvalidation();
+
 \Leaf\Core::runApplication();
