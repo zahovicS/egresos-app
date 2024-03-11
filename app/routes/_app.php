@@ -4,7 +4,19 @@ app()->get('/', function () {
     return redirect('/dashboard');
 });
 
-app()->get('/dashboard', ['middleware' => 'web-auth', function () {
-    // user is logged in
-    return render("pages.dashboard.index");
-  }]);
+app()->group('/dashboard', [
+    'namespace' => 'App\Controllers\Dashboard',
+    'middleware' => 'web-auth',
+    function () {
+        app()->get('/', 'DashboardController@index');
+    }
+]);
+
+
+app()->group('/perfil', [
+    'namespace' => 'App\Controllers\Perfil',
+    'middleware' => 'web-auth',
+    function () {
+        app()->get('/', 'PerfilController@index');
+    }
+]);

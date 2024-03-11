@@ -8,11 +8,3 @@ app()->group('/auth', function () {
     app()->get('/logout', 'Auth\LoginController@logout');
     // Reset and recover account will be added later
 });
-
-// app()->get('/home', 'Auth\HomeController@index');
-
-// app()->group('/user', function () {
-//     app()->get('/', 'Auth\AccountController@user');
-//     app()->get('/update', 'Auth\AccountController@show_update');
-//     app()->post('/update', 'Auth\AccountController@update');
-// });

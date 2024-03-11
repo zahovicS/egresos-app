@@ -30,4 +30,9 @@ return [
             ],
         ],
     ],
+    [
+        "url" => "/perfil",
+        "text" => "Mi perfil",
+        "icon" => "ri-user-3-line"
+    ],
 ];
