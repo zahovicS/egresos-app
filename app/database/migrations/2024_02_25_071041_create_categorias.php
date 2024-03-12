@@ -15,10 +15,12 @@ class CreateCategorias extends Database
         if (!static::$capsule::schema()->hasTable('categorias')) :
             static::$capsule::schema()->create('categorias', function (Blueprint $table) {
                 $table->id();
+                $table->unsignedBigInteger('id_user');
                 $table->string('descripcion', 200);
                 $table->enum('estado', ['0', '1'])->comment("0 => desactivado, 1 => activado")->default("1");
                 $table->timestamps();
                 $table->softDeletes();
+                $table->foreign('id_user')->references('id')->on('users')->onDelete('restrict');
             });
         endif;
 
